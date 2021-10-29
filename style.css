@@ -34,7 +34,27 @@ a {
 a:hover {
   opacity: 0.8;
 }
+
+img {
+  max-width: 100%;
+  object-fit: cover;
+  /* display: block; */
+}
 /* utilites */
+.btn {
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+}
+
+.btn:hover{
+  opacity: 0.8;
+}
+
+.btn:active{
+  transform: scale(0.9);
+}
+
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -61,8 +81,47 @@ a:hover {
 .header .container figure {
   font-size: 1.55rem;
   gap: 0.5rem;
-  
 }
 .header .container a {
   color: var(--primary);
+}
+/* carousel */
+.carousel-container {
+  position: relative;
+  overflow: hidden;
+  height: 85vh;
+  width: 100%;
+}
+
+.carousel-container .carousel {
+  display: flex;
+  width: 600%;
+  height: 100%;
+  margin-left: -100%;
+}
+
+.carousel .slide {
+  width: 100%;
+  height: 100%;
+}
+
+.carousel .slide * {
+  width: 100%;
+  height: 100%;
+}
+
+.carousel-buttons {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 0.5rem;
+}
+.carousel-buttons .btn {
+  background-color: var(--primary);
+  color: var(--black);
+  width: 2rem;
+  height: 2rem;
 }
