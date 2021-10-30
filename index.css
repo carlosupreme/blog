@@ -2,11 +2,14 @@
   --black: #111;
   --primary: #fefeff;
   --primary-a: #f9f8fa;
+  --third: rgb(223, 182, 50);
   --link-color: royalblue;
   --font: sans-serif;
   scroll-behavior: smooth;
 }
-
+::selection {
+  background-color: var(--third);
+}
 *,
 ::after,
 ::before {
@@ -14,7 +17,8 @@
   margin: 0;
 }
 
-/* tags */
+/*------------------------ TAGS ---------------------*/
+
 html {
   font-family: var(--font);
   font-size: 15px;
@@ -37,17 +41,22 @@ a:hover {
 img {
   max-width: 100%;
   object-fit: cover;
-  /* display: block; */
+  display: block;
 }
 
-/* utilites */
-.abs-center{
+/*------------------------ utilites ---------------------*/
+.abs-center {
   position: absolute;
   top: 0;
   left: 0;
   bottom: 0;
   right: 0;
   margin: auto;
+}
+
+.article {
+  margin: 1.5rem 0;
+  background-color: var(--primary-a);
 }
 
 .btn {
@@ -66,7 +75,7 @@ img {
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 1380px;
   margin: 0 auto;
   padding: 0.5rem;
 }
@@ -77,10 +86,32 @@ img {
   align-items: center;
 }
 
-.txt-center{
+.title {
+  text-align: center;
+  letter-spacing: 0.2rem;
+  position: relative;
+}
+
+.title::before {
+  content: "";
+  background-color: var(--third);
+  position: absolute;
+  height: 0.2rem;
+  bottom: -0.5rem;
+  left: 0;
+  right: 0;
+  width: 5rem;
+  margin: auto;
+  transition: width 0.5s;
+}
+
+.txt-center {
   text-align: center;
 }
-/* components */
+
+/*------------------------ COMPONENTS ---------------------*/
+
+/*------------------------ Header ---------------------*/
 .header {
   background-color: #222;
 }
@@ -102,7 +133,8 @@ img {
   color: var(--primary);
 }
 
-/* carousel */
+/*------------------------ Carousel---------------------*/
+
 .carousel-container {
   position: relative;
   overflow: hidden;
@@ -136,7 +168,6 @@ img {
 }
 
 .carousel-buttons {
-  
   display: flex;
   justify-content: space-between;
   align-items: center;

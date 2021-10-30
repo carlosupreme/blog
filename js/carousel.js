@@ -1,9 +1,49 @@
-export default function ({ carousel, nextBtn, prevBtn }) {
+export default function ({ carousel, nextBtn, prevBtn, images }) {
+  const { Programacion, Etica, math, Calculo, Admin, Inv } = images;
   const $carousel = document.querySelector(carousel);
+  const $slides = [...$carousel.children];
   const $nextBtn = document.querySelector(nextBtn);
   const $prevBtn = document.querySelector(prevBtn);
 
   let isClicked = false;
+
+  $slides.forEach((el) => {
+    const currentTitle = el.children[1].textContent.trim();
+    const currentImage = el.children[0];
+
+    switch (currentTitle) {
+      case "Programación":
+        currentImage.src = Programacion;
+        currentImage.alt = "Programacion";
+        currentImage.title = "Programacion";
+        break;
+      case "Matemáticas Discretas":
+        currentImage.src = math;
+        currentImage.alt = "math";
+        currentImage.title = "math";
+        break;
+      case "CálculoDiferencial":
+        currentImage.src = Calculo;
+        currentImage.alt = "Calculo";
+        currentImage.title = "Calculo";
+        break;
+      case "Investigación":
+        currentImage.src = Inv;
+        currentImage.alt = "Investigación";
+        currentImage.title = "Investigación";
+        break;
+      case "Ética":
+        currentImage.src = Etica;
+        currentImage.alt = "Etica";
+        currentImage.title = "Etica";
+        break;
+      case "Administración":
+        currentImage.src = Admin;
+        currentImage.alt = "Administración";
+        currentImage.title = "Administración";
+        break;
+    }
+  });
   // Se pone el ultimo slide al inicio, por si le dan click al prevBtn
   $carousel.insertAdjacentElement("afterbegin", $carousel.lastElementChild);
 
