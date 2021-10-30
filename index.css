@@ -3,9 +3,7 @@
   --primary: #fefeff;
   --primary-a: #f9f8fa;
   --link-color: royalblue;
-  /* --seconday: ;
-  --third: ; */
-  --font: "sans-serif";
+  --font: sans-serif;
   scroll-behavior: smooth;
 }
 
@@ -18,19 +16,20 @@
 
 /* tags */
 html {
+  font-family: var(--font);
   font-size: 15px;
   box-sizing: border-box;
 }
 
 body {
   background-color: var(--primary);
-  font-family: var(--font);
 }
 
 a {
   color: var(--link-color);
   text-decoration: none;
 }
+
 a:hover {
   opacity: 0.8;
 }
@@ -40,18 +39,29 @@ img {
   object-fit: cover;
   /* display: block; */
 }
+
 /* utilites */
+.abs-center{
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+}
+
 .btn {
   border-radius: 50%;
   border: none;
   cursor: pointer;
+  color: inherit;
 }
 
-.btn:hover{
+.btn:hover {
   opacity: 0.8;
 }
 
-.btn:active{
+.btn:active {
   transform: scale(0.9);
 }
 
@@ -67,10 +77,14 @@ img {
   align-items: center;
 }
 
+.txt-center{
+  text-align: center;
+}
 /* components */
 .header {
   background-color: #222;
 }
+
 .header .container {
   display: flex;
   justify-content: space-between;
@@ -78,18 +92,22 @@ img {
   padding: 1rem 0.5rem;
   color: var(--primary);
 }
+
 .header .container figure {
   font-size: 1.55rem;
   gap: 0.5rem;
 }
+
 .header .container a {
   color: var(--primary);
 }
+
 /* carousel */
 .carousel-container {
   position: relative;
   overflow: hidden;
-  height: 85vh;
+  height: 80vh;
+  max-height: 300px;
   width: 100%;
 }
 
@@ -105,34 +123,29 @@ img {
   height: 100%;
   position: relative;
 }
-.carousel .text{
-  position: absolute;
-  top: 50%;
-  left: 10%;
-  width: 80%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+
+.carousel h2 {
+  color: var(--primary);
+  font-size: 2rem;
 }
 
-.carousel .slide img{
+.carousel .slide img {
   width: 100%;
   height: 100%;
+  filter: brightness(0.5);
 }
 
 .carousel-buttons {
-  width: 100%;
-  position: absolute;
-  top: 50%;
-  left: 0;
+  
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 0 0.5rem;
 }
+
 .carousel-buttons .btn {
   background-color: var(--primary);
   color: var(--black);
-  width: 2rem;
-  height: 2rem;
+  width: 1.8rem;
+  height: 1.8rem;
 }

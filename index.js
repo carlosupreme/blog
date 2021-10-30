@@ -1,4 +1,4 @@
-import carousel from "./assets/js/carousel.js";
+import carousel from "./js/carousel.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   carousel({
@@ -7,3 +7,4 @@ document.addEventListener("DOMContentLoaded", () => {
     prevBtn: "#carousel-prev"
   });
 });
+

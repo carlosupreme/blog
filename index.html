@@ -6,8 +6,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Primer Semestre</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
+  <link rel="stylesheet" href="./index.css">
+  <link rel="stylesheet" href="./icons/style.css">
+  <meta name="description" content="Blog donde encontrarás los apuntes del primer semestre de Ingenieria en Sistemas Computacionales">
 </head>
 
 <body>
@@ -15,7 +16,7 @@
     <div class="container">
       <figure class="flex-center">
         <i class="far fa-sticky-note"></i>
-        <span>Mis Notas</span>
+        <strong>Mis Notas</strong>
       </figure>
       <h2><a href="https://github.com/carlosupreme" target="_blank" rel="noopener">@carlosuprem</a></h2>
     </div>
@@ -25,33 +26,45 @@
     <div class="carousel-container">
       <div class="carousel">
         <div class="slide">
-          <img src="assets/img/fedra.webp" alt="">
-         <div class="text"><h2>Materia name</h2> <button class="btn">Ver</button></div>
+          <img loading="lazy" src="./img/code.jpg" alt="">
+          <div class="abs-center flex-center">
+            <h2>Programación</h2> 
+          </div>
         </div>
         <div class="slide">
-          <img src="assets/img/la_muerte_de_socrates.webp" alt="">
-         <div class="text"><h2>Materia name</h2> <button class="btn">Ver</button></div>
+          <img loading="lazy" src="./img/matematicas.jfif" alt="">
+          <div class="abs-center flex-center">
+            <h2 class="txt-center">Matemáticas <br>Discretas</h2> 
+          </div>
         </div>
         <div class="slide">
-          <img src="assets/img/el_angel_caido.webp" alt="">
-         <div class="text"><h2>Materia name</h2> <button class="btn">Ver</button></div>
+          <img loading="lazy" src="./img/calculo.jfif" alt="">
+          <div class="abs-center flex-center">
+            <h2 class="txt-center">Cálculo<br>Diferencial</h2> 
+          </div>
         </div>
         <div class="slide">
-          <img src="assets/img/la_escuela_de_atenas.webp" alt="">
-         <div class="text"><h2>Materia name</h2> <button class="btn">Ver</button></div>
+          <img loading="lazy" src="./img/inv.jpg" alt="">
+          <div class="abs-center flex-center">
+            <h2>Investigación</h2> 
+          </div>
         </div>
         <div class="slide">
-          <img src="assets/img/la_persistencia_del_tiempo.webp" alt="">
-         <div class="text"><h2>Materia name</h2> <button class="btn">Ver</button></div>
+          <img loading="lazy" src="./img/admin.jpg" alt="">
+          <div class="abs-center flex-center">
+            <h2>Administración</h2>
+          </div>
         </div>
         <div class="slide">
-          <img src="assets/img/la_tentacion_de_san_antonio.webp" alt="">
-         <div class="text"><h2>Materia name</h2> <button class="btn">Ver</button></div>
+          <img loading="lazy" src="./img/la_muerte_de_socrates.jpg" alt="">
+          <div class="abs-center flex-center">
+            <h2>Ética</h2>
+          </div>
         </div>
       </div>
-      <div class="carousel-buttons">
-        <button id="carousel-prev" class="btn fas fa-chevron-left"></button>
-        <button id="carousel-next" class="btn fas fa-chevron-right"></button>
+      <div class="carousel-buttons abs-center">
+        <button aria-label="Ir a la anterior diapositiva" id="carousel-prev" class="btn icon-angle-left"></button>
+        <button aria-label="Ir a la siguiente diapositiva"  id="carousel-next" class="btn icon-angle-right"></button>
       </div>
     </div>
   </section>
