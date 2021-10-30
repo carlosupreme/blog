@@ -1,7 +1,8 @@
-import carousel from "./js/carousel.js";
+import newCarousel from "./js/carousel.js";
+import { removeElement } from "./js/responsive.js";
 
 document.addEventListener("DOMContentLoaded", () => {
-  carousel({
+  newCarousel({
     carousel: ".carousel-container .carousel",
     nextBtn: "#carousel-next",
     prevBtn: "#carousel-prev",
@@ -14,5 +15,6 @@ document.addEventListener("DOMContentLoaded", () => {
       Inv: "./img/inv.jpg"
     }
   });
+  removeElement(".header strong","(min-width:400px)")
 });
 

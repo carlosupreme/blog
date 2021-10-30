@@ -38,10 +38,29 @@ a:hover {
   opacity: 0.8;
 }
 
+h2{
+  font-size: 2rem;
+}
+
+
 img {
   max-width: 100%;
   object-fit: cover;
   display: block;
+}
+
+img::selection {
+  background: none;
+}
+
+p {
+  text-align: justify;
+  line-height: 1.6;
+  font-size: 1.2rem;
+}
+
+section {
+  margin-bottom: 1rem;
 }
 
 /*------------------------ utilites ---------------------*/
@@ -76,7 +95,8 @@ img {
 
 .container {
   max-width: 1380px;
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
   padding: 0.5rem;
 }
 
@@ -179,4 +199,11 @@ img {
   color: var(--black);
   width: 1.8rem;
   height: 1.8rem;
+}
+
+/* ------------Introduccion-------------- */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
 }
