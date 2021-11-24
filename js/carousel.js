@@ -1,14 +1,15 @@
-export default function ({ carousel, nextBtn, prevBtn, images }) {
-  const { Programacion, Etica, math, Calculo, Admin, Inv } = images;
+export default function ({ carousel, nextBtn, prevBtn, imagesLinks }) {
+  const { Programacion, Etica, math, Calculo, Admin, Inv } = imagesLinks;
   const $carousel = document.querySelector(carousel);
   const $slides = [...$carousel.children];
   const $nextBtn = document.querySelector(nextBtn);
   const $prevBtn = document.querySelector(prevBtn);
 
+  // Esta variable ayuda a que no hagan multiples clicks 
   let isClicked = false;
 
   $slides.forEach((el) => {
-    const currentTitle = el.children[1].textContent.trim();
+    const currentTitle = el.children[1].textContent.trim(); // Texto dentro del h2
     const currentImage = el.children[0];
 
     switch (currentTitle) {
@@ -44,6 +45,7 @@ export default function ({ carousel, nextBtn, prevBtn, images }) {
         break;
     }
   });
+
   // Se pone el ultimo slide al inicio, por si le dan click al prevBtn
   $carousel.insertAdjacentElement("afterbegin", $carousel.lastElementChild);
 
