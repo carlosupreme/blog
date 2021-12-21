@@ -1,0 +1,117 @@
+/* CLASES GENERICAS  */
+
+.txt-center {
+  text-align: center;
+}
+
+.abs-center {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+}
+
+.article {
+  margin: 1.5rem 0;
+}
+
+.block {
+  display: block;
+}
+.btn {
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  color: inherit;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+.btn:active {
+  transform: scale(0.9);
+}
+
+.container {
+  max-width: 1380px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0.5rem;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mb-2 {
+  margin-bottom: 2rem;
+}
+
+.title {
+  text-align: center;
+  letter-spacing: 0.1rem;
+}
+
+
+.tag {
+  padding: 1rem;
+  border-radius: 1rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+  color: #333;
+  font-size: 1.5rem;
+}
+
+.star svg {
+  fill: rgb(216, 216, 224);
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+@media (max-width: 500px) {
+  .tag {
+    padding: 0.5rem 0 0 0.5rem;
+    font-size: 1rem;
+  }
+
+  .star svg {
+    fill: rgb(216, 216, 224);
+    width: 0.7rem;
+    height: 0.7rem;
+  }
+}
+
+.tag > span {
+  background-color: rgba(33, 240, 171, 0.568);
+  padding: 0.2rem;
+  border-radius: 0.5rem;
+}
+
+svg::selection,
+.tag *::selection {
+  background: none;
+}
+.star svg.active {
+  fill: rgb(241, 241, 17);
+}
+
+.tag .level {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  background-color: rgba(78, 181, 212, 0.603);
+}
+
+.level b {
+  font-size: 60%;
+  color: rgb(104, 104, 104);
+}

@@ -1,116 +1,55 @@
 <!DOCTYPE html>
 <html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Primer Semestre</title>
+    <link rel="stylesheet" href="./css/normalize.css" />
+    <link rel="stylesheet" href="./css/styleGeneric.css" />
+    <link rel="stylesheet" href="./index.css" />
+    <link rel="stylesheet" href="./icons/style.css" />
+    <!-- Google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" href="./img/icon.png" type="image/x-icon" />
+    <meta name="theme-color" content="#222" />
+    <meta
+      name="description"
+      content="Blog donde encontrarás los apuntes del primer semestre de Ingenieria en Sistemas Computacionales"
+    />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Primer Semestre</title>
-  <link rel="stylesheet" href="./index.css">
-  <link rel="stylesheet" href="./icons/style.css">
-  <link rel="shortcut icon" href="./img/icon.png" type="image/x-icon">
-  <meta name="theme-color" content="#222">
-  <meta name="description"
-    content="Blog donde encontrarás los apuntes del primer semestre de Ingenieria en Sistemas Computacionales">
-</head>
-
-<body>
-  <header class="header">
-    <div class="container">
-      <figure class="flex-center">
-        <i class="icon-sticky-note-o"></i>
-        <strong>Mis Notas</strong>
-      </figure>
-      <h3><a href="https://github.com/carlosupreme" target="_blank" rel="noopener">@carlosuprem</a></h3>
+  <body>
+    <div class="left">
+      <h1 class="h1">1er Semestre</h1>
+      <a href="#/Matematicas" class="primary-link h2">
+        <span>Matematicas</span></a
+      >
+      <a style="--primary: royalblue" href="#/Programacion" class="primary-link h2">
+        <span>Programacion</span></a
+      >
+      <a href="#/Calculo" style="--primary: red" class="primary-link h2"> <span>Calculo</span></a>
+      <a href="#/Etica" style="--primary: green" class="primary-link h2"> <span>Etica</span></a>
+      <a href="#/Administracion" style="--primary: violet" class="primary-link h2">
+        <span>Administracion</span></a
+      >
+      <a href="#/Investigacion" style="--primary:#63392c " class="primary-link h2">
+        <span>Investigación</span></a
+      >
     </div>
-  </header>
-  <!-- carousel -->
-  <section class="container">
-    <div class="carousel-container">
-      <div class="carousel">
-        <div class="slide">
-          <img loading="lazy">
-          <div class="abs-center flex-center">
-            <h2>Programación</h2>
-          </div>
-        </div>
-        <div class="slide">
-          <img loading="lazy">
-          <div class="abs-center flex-center">
-            <h2 class="txt-center">Matemáticas <br>Discretas</h2>
-          </div>
-        </div>
-        <div class="slide">
-          <img loading="lazy">
-          <div class="abs-center flex-center">
-            <h2 class="txt-center">Cálculo<br>Diferencial</h2>
-          </div>
-        </div>
-        <div class="slide">
-          <img loading="lazy">
-          <div class="abs-center flex-center">
-            <h2>Investigación</h2>
-          </div>
-        </div>
-        <div class="slide">
-          <img loading="lazy">
-          <div class="abs-center flex-center">
-            <h2>Administración</h2>
-          </div>
-        </div>
-        <div class="slide">
-          <img loading="lazy">
-          <div class="abs-center flex-center">
-            <h2>Ética</h2>
-          </div>
-        </div>
-      </div>
-      <div class="carousel-buttons abs-center">
-        <button aria-label="Ir a la anterior diapositiva" id="carousel-prev" class="btn icon-angle-left"></button>
-        <button aria-label="Ir a la siguiente diapositiva" id="carousel-next" class="btn icon-angle-right"></button>
-      </div>
+    <div class="right">
+      <!-- Buton para cerrar y abrir el menu -->
+      <span id="menu-btn">
+        <i class="icon-angle-left"></i>
+      </span>  
+      <div id="introduction"></div>
+      <section id="materia-container"></section>
     </div>
-  </section>
-  <!-- introduccion -->
-  <section class="container">
-    <h2 class="title">Introducción</h2>
-    <article class="article grid">
-      <div>
-        <p>
-          Soy Carlos Sosa y bienvenido a <i><strong>mis notas</strong></i><br>
-          En este blog subiré todos mis apuntes del primer semestre de la carrera Ingenieria en Sistemas
-          Computacionales.
-          En el Tecnológico Nacional de México Campus Oaxaca.
-          <a href="https://www.tecnm.mx/dir_escolares/reticulas/Reticula%20Ingenieria%20en%20Sistemas%20Computacionales.pdf"
-            target="_blank" rel="noopener"> <i class="icon-file-pdf-o"></i> Ver Reticula</a><br><br>
-          Este sitio está hecho completamente con codigo puro.<br>
-        </p>
-        <div class="progress">
-          <p><b>HTML</b><b>90%</b></p>
-          <progress value="90" min="0" max="100"></progress>
-        </div>
-        <div class="progress">
-          <p><b>CSS</b><b>65%</b></p>
-          <progress value="65" min="0" max="100"></progress>
-        </div>
-        <div class="progress">
-          <p><b>JavaScript</b><b>50%</b></p>
-          <progress value="50" min="0" max="100"></progress>
-        </div>
-      </div>
-
-      <div class="social">
-        <img src="./img/hashirama.jpg" alt="me" title="Me">
-        <div class="icons">
-          <a href="https://www.youtube.com" target="_blank" class="icon-facebook"></a>
-          <a href="https://www.youtube.com" target="_blank" class="icon-github"></a>
-          <a href="https://www.youtube.com" target="_blank" class="icon-youtube-play"></a>
-          <a href="https://www.youtube.com" target="_blank" class=" icon-instagram"></a>
-        </div>
-      </div>
-    </article>
-  </section>
-  <script src="index.js" type="module"></script>
-</body>
-
+    <script src="index.js" type="module"></script>
+  </body>
 </html>

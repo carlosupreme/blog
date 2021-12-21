@@ -1,11 +1,11 @@
-export default function ({ carousel, nextBtn, prevBtn, imagesLinks }) {
+export default function newCarousel({ carousel, nextBtn, prevBtn, imagesLinks }) {
   const { Programacion, Etica, math, Calculo, Admin, Inv } = imagesLinks;
   const $carousel = document.querySelector(carousel);
   const $slides = [...$carousel.children];
   const $nextBtn = document.querySelector(nextBtn);
   const $prevBtn = document.querySelector(prevBtn);
 
-  // Esta variable ayuda a que no hagan multiples clicks 
+  // Esta variable ayuda a que no hagan multiples clicks
   let isClicked = false;
 
   $slides.forEach((el) => {
@@ -90,4 +90,22 @@ export default function ({ carousel, nextBtn, prevBtn, imagesLinks }) {
       prevSlide();
     } else return false;
   });
+
+  // setInterval(() => {
+  //   nextSlide()
+  // }, 1000);
 }
+
+// newCarousel({
+//     carousel: ".carousel-container .carousel",
+//     nextBtn: "#carousel-next",
+//     prevBtn: "#carousel-prev",
+//     imagesLinks: {
+//       Programacion: "./img/code.jpg",
+//       Etica: "./img/la_muerte_de_socrates.jpg",
+//       math: "./img/matematicas.jfif",
+//       Calculo: "./img/calculo.jfif",
+//       Admin: "./img/admin.jpg",
+//       Inv: "./img/inv.jpg",
+//     },
+//   });
