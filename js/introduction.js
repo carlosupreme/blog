@@ -4,7 +4,7 @@ export default function setIntroduction(button, container) {
   let isClosed = localStorage.getItem("closed") || false;
 
   if (!JSON.parse(isClosed)) {
-    Ajax("../html/introduction.html", (text) => {
+    Ajax("./html/introduction.html", (text) => {
       document.querySelector(container).innerHTML = text;
     },()=>{},"text");
   }
