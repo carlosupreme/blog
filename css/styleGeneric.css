@@ -1,9 +1,44 @@
 /* CLASES GENERICAS  */
-
+:root {
+  /* Font sizes  from https://utopia.fyi/type/calculator/?c=320,21,1.2,1300,24,1.25,5,2,&s=0.75%7C0.5%7C0.25,1.5%7C2%7C3%7C4%7C6,s-l*/
+  --step--2: clamp(0.64rem, 0.66rem + -0.11vw, 0.58rem);
+  --step--1: clamp(0.80rem, 0.77rem + 0.15vw, 0.88rem);
+  --step-0: clamp(1.00rem, 0.88rem + 0.61vw, 1.31rem);
+  --step-1: clamp(1.25rem, 0.97rem + 1.40vw, 1.97rem);
+  --step-2: clamp(1.56rem, 1.02rem + 2.71vw, 2.95rem);
+  --step-3: clamp(1.95rem, 0.99rem + 4.83vw, 4.43rem);
+  --step-4: clamp(2.44rem, 0.80rem + 8.20vw, 6.64rem);
+  --step-5: clamp(3.05rem, 0.35rem + 13.49vw, 9.97rem);
+}
+.s--2 {
+  font-size: var(--step--2);
+}
+.s--1 {
+  font-size: var(--step--1);
+  line-height: 150%;
+}
+.s-0 {
+  line-height: 150%;
+  font-size: var(--step-0);
+}
+.s-1 {
+  font-size: var(--step-1);
+}
+.s-2 {
+  font-size: var(--step-2);
+}
+.s-3 {
+  font-size: var(--step-3);
+}
+.s-4 {
+  font-size: var(--step-4);
+}
+.s-5 {
+  font-size: var(--step-5);
+}
 .txt-center {
   text-align: center;
 }
-
 .abs-center {
   position: absolute;
   top: 0;
@@ -12,11 +47,12 @@
   right: 0;
   margin: auto;
 }
-
 .article {
   margin: 1.5rem 0;
+  padding: 1rem;
+  width: 100%;
+  height: auto;
 }
-
 .block {
   display: block;
 }
@@ -26,92 +62,43 @@
   cursor: pointer;
   color: inherit;
 }
-
 .btn:hover {
   opacity: 0.9;
 }
-
 .btn:active {
   transform: scale(0.9);
 }
-
-.container {
-  max-width: 1380px;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 0.5rem;
-}
-
 .flex-center {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
 .mb-2 {
   margin-bottom: 2rem;
 }
-
-.title {
-  text-align: center;
-  letter-spacing: 0.1rem;
+.oa {
+  overflow: auto;
+}
+.contenido-textual, .contenido-textual *{
+  font-size: var(--step-0);
+}
+.math {
+  letter-spacing: 0.2rem;
+}
+.pre {
+  white-space: pre;
 }
 
-
-.tag {
-  padding: 1rem;
-  border-radius: 1rem;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 1rem;
-  color: #333;
-  font-size: 1.5rem;
+.float-r {
+  float: right;
+  margin-left: 1rem;
+  margin-bottom: 1rem;
 }
 
-.star svg {
-  fill: rgb(216, 216, 224);
-  width: 1.5rem;
-  height: 1.5rem;
+.bg-success {
+  background-color: greenyellow;
 }
 
-@media (max-width: 500px) {
-  .tag {
-    padding: 0.5rem 0 0 0.5rem;
-    font-size: 1rem;
-  }
-
-  .star svg {
-    fill: rgb(216, 216, 224);
-    width: 0.7rem;
-    height: 0.7rem;
-  }
-}
-
-.tag > span {
-  background-color: rgba(33, 240, 171, 0.568);
-  padding: 0.2rem;
-  border-radius: 0.5rem;
-}
-
-svg::selection,
-.tag *::selection {
-  background: none;
-}
-.star svg.active {
-  fill: rgb(241, 241, 17);
-}
-
-.tag .level {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  background-color: rgba(78, 181, 212, 0.603);
-}
-
-.level b {
-  font-size: 60%;
-  color: rgb(104, 104, 104);
+.font-color{
+  color: var(--text-color);
 }

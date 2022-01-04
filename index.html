@@ -5,15 +5,31 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Primer Semestre</title>
-    <link rel="stylesheet" href="./css/normalize.css" />
-    <link rel="stylesheet" href="./css/styleGeneric.css" />
-    <link rel="stylesheet" href="./index.css" />
-    <link rel="stylesheet" href="./icons/style.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <!-- <link rel="stylesheet" href="./css/styleGeneric.css" /> -->
+    <!-- <link rel="stylesheet" href="./index.css" /> -->
+    <link rel="stylesheet" href="./css/style.css" />
     <!-- Google font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap"
+      rel="stylesheet"
+    />
+    <!-- poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700;800&display=swap"
       rel="stylesheet"
     />
     <link rel="shortcut icon" href="./img/icon.png" type="image/x-icon" />
@@ -25,31 +41,92 @@
   </head>
 
   <body>
-    <div class="left">
-      <h1 class="h1">1er Semestre</h1>
-      <a href="#/Matematicas" class="primary-link h2">
-        <span>Matematicas</span></a
-      >
-      <a style="--primary: royalblue" href="#/Programacion" class="primary-link h2">
-        <span>Programacion</span></a
-      >
-      <a href="#/Calculo" style="--primary: red" class="primary-link h2"> <span>Calculo</span></a>
-      <a href="#/Etica" style="--primary: green" class="primary-link h2"> <span>Etica</span></a>
-      <a href="#/Administracion" style="--primary: violet" class="primary-link h2">
-        <span>Administracion</span></a
-      >
-      <a href="#/Investigacion" style="--primary:#63392c " class="primary-link h2">
-        <span>Investigación</span></a
-      >
-    </div>
-    <div class="right">
-      <!-- Buton para cerrar y abrir el menu -->
-      <span id="menu-btn">
-        <i class="icon-angle-left"></i>
-      </span>  
-      <div id="introduction"></div>
-      <section id="materia-container"></section>
-    </div>
-    <script src="index.js" type="module"></script>
+    <i class="bx bxs-moon" id="darkmode-btn"></i>
+    <aside class="sidebar">
+      <i class="bx bx-menu-alt-left" id="btn"></i>
+      <div class="logo_content">
+        <div class="logo">
+          <i class="bx bxs-book-content"></i>
+          <p class="logo_name">Mis notas</p>
+        </div>
+      </div>
+      <ul>
+        <li>
+          <i class="bx bx-search"></i>
+          <input type="search" placeholder="Search..." id="searchInput" />
+        </li>
+        <li>
+          <a href="#/Matematicas">
+            <i class="bx bx-math"></i>
+            <span class="links_name">Matematicas</span>
+          </a>
+        </li>
+        <li>
+          <a href="#/Programacion">
+            <i class="bx bx-code-alt"></i>
+            <span class="links_name">Programacion</span>
+          </a>
+        </li>
+        <li>
+          <a href="#/Administracion">
+            <i class="bx bx-bar-chart-alt"></i>
+            <span class="links_name">Administracion</span>
+          </a>
+        </li>
+        <li>
+          <a href="#/Calculo">
+            <i class="bx bxs-calculator"></i>
+            <span class="links_name">Calculo</span>
+          </a>
+        </li>
+        <li>
+          <a href="#/Investigacion">
+            <i class="bx bxl-wikipedia"></i>
+            <span class="links_name">Investigacion</span>
+          </a>
+        </li>
+        <li>
+          <a href="#/Etica">
+            <i class="bx bxs-conversation"></i>
+            <span class="links_name">Etica</span>
+          </a>
+        </li>
+        <li>
+          <a href="#/javascript">
+            <i class="bx bxl-javascript"></i>
+            <span class="links_name">JavaScript</span>
+          </a>
+        </li>
+        <div class="profile_content">
+          <div class="profile">
+            <div class="profile_details">
+              <img src="./img/miyata.jfif" />
+              <div class="name_job">
+                <div class="name">Carlos Sosa</div>
+                <div class="job">Estudiante</div>
+              </div>
+            </div>
+            <a href="https://github.com/carlosupreme" target="_blank" rel="noopener">
+              <i class="bx bxl-github" id="github"></i>
+            </a>
+          </div>
+        </div>
+      </ul>
+    </aside>
+    <main>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur illum
+      consectetur eligendi beatae labore porro qui fugit hic fugiat accusantium!
+      Odio voluptatem maxime, neque sapiente nobis minima eligendi inventore
+      doloremque dolorum, eum possimus consectetur maiores sunt tenetur hic,
+      illum quis aut expedita quisquam. Assumenda obcaecati nulla rem tenetur
+      omnis et, harum vel unde minus, dignissimos, molestiae eos voluptatem ad
+      impedit distinctio enim beatae earum vitae. Qui quam voluptatibus soluta,
+      neque rem enim maxime maiores consectetur necessitatibus facilis, animi ad
+      alias. Reiciendis iste explicabo sit vero voluptas quisquam? Magni
+      voluptatem, eos laboriosam ratione, qui vero nostrum illum odio, porro
+      amet distinctio.
+      <img src="./img/la_muerte_de_socrates.jpg" alt="">
+    </main>
   </body>
+  <script src="index.js" type="module"></script>
 </html>

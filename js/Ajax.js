@@ -1,18 +1,11 @@
-export default async function Ajax(url, success, error, type) {
+export default async function Ajax(url, success) {
   try {
     let res = await fetch(url);
-    let conversor;
+    let html = await res.text();
+    if (!res.ok) throw { status: res.status, statusText: res.statusText };
 
-    if (type === "text") {
-      conversor = await res.text();
-    } else if (type === "json") {
-      conversor = await res.json();
-    }
-
-    if(!res.ok) throw {status: res.status, statusText: res.statusText}
-    
-    success(conversor);
+    success(html);
   } catch (err) {
-    error(err)
+    console.warn(err);
   }
 }

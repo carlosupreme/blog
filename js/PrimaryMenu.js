@@ -1,21 +1,26 @@
-export default function PrimaryMenu() {
-  const btnMenu = document.querySelector("#menu-btn i");
-  const divs = [
-    document.querySelector(".left"),
-    document.querySelector(".right"),
-  ];
+export default function PrimaryMenu(sidebar, menuBtn) {
+  const $sidebar = document.querySelector(sidebar);
+  const $menuBtn = document.querySelector(menuBtn);
+  const $searchBtn = document.querySelector(sidebar + " .bx-search");
+  const $searchInput = document.querySelector(sidebar + " #searchInput");
+
   document.addEventListener("click", (e) => {
-    if (e.target.matches("#menu-btn") || e.target === btnMenu) {
-      divs.forEach((el) => el.classList.toggle("active"));
-      btnMenu.classList = !divs[0].classList.value.includes("active")
-        ? "icon-angle-left"
-        : "icon-angle-left derecha";
+    if (e.target === $menuBtn || e.target === $searchBtn) {
+      $sidebar.classList.toggle("active");
     }
   });
 
-  document.addEventListener(
-    "keydown",
-    (e) =>
-      e.key == "b" && e.ctrlKey && document.querySelector("#menu-btn").click()
-  );
+  // PARA HACER UN FILTRO:
+  // document.addEventListener("keydown", (e) => {
+  //   if (e.key === "f" && e.ctrlKey) {
+  //     e.preventDefault();
+  //     $sidebar.classList.add(
+  //       $sidebar.classList.contains("active") ? "" : "active"
+  //     );
+  //     $searchInput.focus();
+  //   } else if (e.key === "b" && e.ctrlKey) {
+  //     e.preventDefault();
+  //     $menuBtn.click();
+  //   }
+  // });
 }
