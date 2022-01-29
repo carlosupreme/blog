@@ -95,7 +95,7 @@ export default function newCarousel({ carousel, nextBtn, prevBtn, imagesLinks })
   //   nextSlide()
   // }, 1000);
 }
-
+// Forma de usarlo:
 // newCarousel({
 //     carousel: ".carousel-container .carousel",
 //     nextBtn: "#carousel-next",

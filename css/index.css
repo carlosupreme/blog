@@ -1,0 +1,211 @@
+:root {
+  --sidebar-bg: #f7f4f3;
+  --bg-color: #ffffff;
+  --text-color: #313130;
+  --hover-color: #f7f4f3;
+  --link-color: #5f7fdf;
+  --primary: rgb(209, 209, 33);
+  --font-family: "Poppins", sans-serif;
+  --box-shadow: #f7f4f3 2.4px 2.4px 3.2px;
+  --box-shadow-header: #d9d6d5 0 4px 0;
+  --sidebar-width: 4.688rem;
+  --sidebar-active-width: 18rem;
+  --header-height: 3.5rem;
+}
+:root.dark {
+  --sidebar-bg: #292c31;
+  --bg-color: #232529;
+  --text-color: #e2e3e7;
+  --hover-color: #292c31;
+  --box-shadow: #35383f 2.4px 2.4px 3.2px;
+  --box-shadow-header: #35383f 0 4px 0;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+}
+
+::selection {
+  background-color: var(--link-color);
+}
+
+
+/*------------------------ TAGS ---------------------*/
+
+html {
+  font-size: 16px;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+:is(body, #root) {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: var(--font-family);
+}
+
+/* ---------- Header ----------*/
+.header {
+  width: 100%;
+  height: var(--header-height);
+  box-shadow: var(--box-shadow-header);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  background-color: var(--bg-color);
+}
+.header i {
+  cursor: pointer;
+  background-color: var(--hover-color);
+  padding: 0.4rem;
+  border-radius: 50%;
+  transform: scale(1);
+  transition: transfrom 0.4s;
+}
+.header i:active {
+  transform: scale(0.8);
+}
+/* ---------- Sidebar ----------*/
+.sidebar {
+  background-color: var(--sidebar-bg);
+  width: var(--sidebar-width);
+  height: 100vh;
+  position: fixed;
+  top: calc(var(--header-height) + 4px);
+  left: 0;
+  transition: width 0.4s;
+  padding: 1rem 0 0 0.5rem;
+  font-size: var(--step-0);
+  z-index: 20;
+  display: flex;
+  flex-direction: column;
+}
+.sidebar.active {
+  width: var(--sidebar-active-width);
+}
+.sidebar > i {
+  position: absolute;
+  top: 1rem;
+  right: 2rem;
+}
+.sidebar.active > i {
+  right: 1rem;
+}
+.sidebar .links {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 2rem;
+  position: relative;
+}
+.sidebar .links a {
+  color: var(--text-color);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.4s;
+  padding: 0.5rem;
+  margin-right: 0.5rem;
+}
+.sidebar.active .links a {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+.sidebar .links a:hover {
+  background-color: var(--bg-color);
+}
+.sidebar .github {
+  margin: auto;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  width: 100%;
+  position: relative;
+}
+.sidebar .github :is(.text, img) {
+  display: none;
+}
+.sidebar.active .github .text {
+  margin-right: 5.8rem;
+  display: flex;
+  flex-direction: column;
+}
+.sidebar.active .github img {
+  display: block;
+  width: 2.5rem;
+  height: 2.5rem;
+  object-fit: cover;
+}
+.sidebar .github a {
+  color: var(--text-color);
+  position: absolute;
+  bottom: 0;
+  right: 2rem;
+}
+.sidebar.active .github a {
+  position: relative;
+  right: 1rem;
+}
+/* scroll up btn */
+.fas.fa-chevron-up{
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  background-color: var(--hover-color);
+  padding: 0.5rem;
+  border-radius: 50%;
+  display: none;
+}
+.fas.fa-chevron-up.active{
+  display: block;
+}
+
+/* --------------------------- main content -------------- */
+main {
+  padding: 1rem;
+  margin-left: var(--sidebar-width);
+  margin-top: var(--header-height);
+  transition: margin 0.4s;
+}
+
+.sidebar.active ~ main {
+  margin-left: var(--sidebar-active-width);
+}
+
+@media (max-width: 768px) {
+  .sidebar,
+  .sidebar.active {
+    width: 100%;
+    height: auto;
+    position: static;
+    margin-top: calc(var(--header-height) + 4px);
+    padding: 0 1rem 1rem;
+  }
+  .sidebar > i, .sidebar.active > i{
+    display: none;  
+  }
+  .sidebar .links a, .sidebar.active .links a {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+  .sidebar.active .github :is(.text, img),
+  .sidebar .github :is(.text, img){
+   display: none;
+  }
+  .sidebar .github a,
+  .sidebar.active .github a{
+    display: none;
+  }
+  main,
+  .sidebar.active ~ main {
+    margin-left: 0;
+    margin-top: 1rem;
+  }
+}
