@@ -10,7 +10,20 @@ export default async function Router($root) {
     $root.insertAdjacentHTML("beforeend", text);
   };
 
-  if (!hash || hash === "#/") {
+  // PROGRAMACION PAGE
+  if (hash.includes("Programacion")) {
+    await Ajax("./html/programacion.html", insertText);
+    // MATEMATICAS PAGE
+  } else if (hash.includes("Matematicas")) {
+    await Ajax("./html/mate.html", insertText);
+    // CALCULO PAGE
+  } else if (hash.includes("Calculo")) {
+    await Ajax("./html/calculo.html", insertText);
+    // JAVASCRIPT PAGE
+  } else if (hash.includes("JavaScript")) {
+    await Ajax("./html/js.html", insertText);
+    // 404 PAGE
+  } else {
     Ajax("./html/carousel.html", (text) => {
       $root.innerHTML = text;
       newCarousel({
@@ -19,29 +32,11 @@ export default async function Router($root) {
         prevBtn: "#carousel-prev",
         imagesLinks: {
           Programacion: "./img/code.jpg",
-          Etica: "./img/la_muerte_de_socrates.jpg",
           math: "./img/matematicas.jfif",
           Calculo: "./img/calculo.jfif",
-          Admin: "./img/admin.jpg",
-          Inv: "./img/inv.jpg",
+          js: "./img/js.jpg",
         },
       });
     });
-  } else if (hash.includes("Programacion")) {
-    await Ajax("./html/programacion.html", insertText);
-  } else if (hash.includes("Matematicas")) {
-    await Ajax("./html/mate.html", insertText);
-  } else if (hash.includes("Investigacion")) {
-    await Ajax("./html/inv.html", insertText);
-  } else if (hash.includes("Calculo")) {
-    await Ajax("./html/calculo.html", insertText);
-  } else if (hash.includes("Etica")) {
-    await Ajax("./html/etica.html", insertText);
-  } else if (hash.includes("Administracion")) {
-    await Ajax("./html/administracion.html", insertText);
-  } else if (hash.includes("JavaScript")) {
-    await Ajax("./html/js.html", insertText);
-  } else {
-    await Ajax("./html/404.html", insertText);
   }
 }

@@ -31,9 +31,6 @@ export default function Sidebar() {
       <a href="#/Programacion">Programacion</a>
       <a href="#/Matematicas">Matematicas</a>
       <a href="#/Calculo">Calculo</a>
-      <a href="#/Investigacion">Investigacion</a>
-      <a href="#/Administracion">Administracion</a>
-      <a href="#/Etica">Etica</a>
     </div>
     <div class="github">
     <img src="./img/miyata.jfif">

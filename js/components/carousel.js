@@ -1,5 +1,10 @@
-export default function newCarousel({ carousel, nextBtn, prevBtn, imagesLinks }) {
-  const { Programacion, Etica, math, Calculo, Admin, Inv } = imagesLinks;
+export default function newCarousel({
+  carousel,
+  nextBtn,
+  prevBtn,
+  imagesLinks,
+}) {
+  const { Programacion, math, Calculo, js } = imagesLinks;
   const $carousel = document.querySelector(carousel);
   const $slides = [...$carousel.children];
   const $nextBtn = document.querySelector(nextBtn);
@@ -28,21 +33,10 @@ export default function newCarousel({ carousel, nextBtn, prevBtn, imagesLinks })
         currentImage.alt = "Calculo";
         currentImage.title = "Calculo";
         break;
-      case "Investigación":
-        currentImage.src = Inv;
-        currentImage.alt = "Investigación";
-        currentImage.title = "Investigación";
-        break;
-      case "Ética":
-        currentImage.src = Etica;
-        currentImage.alt = "Etica";
-        currentImage.title = "Etica";
-        break;
-      case "Administración":
-        currentImage.src = Admin;
-        currentImage.alt = "Administración";
-        currentImage.title = "Administración";
-        break;
+      case "JavaScript":
+        currentImage.src = js;
+        currentImage.alt = "JavaScript";
+        currentImage.title = "JavaScript";
     }
   });
 
@@ -90,22 +84,4 @@ export default function newCarousel({ carousel, nextBtn, prevBtn, imagesLinks })
       prevSlide();
     } else return false;
   });
-
-  // setInterval(() => {
-  //   nextSlide()
-  // }, 1000);
 }
-// Forma de usarlo:
-// newCarousel({
-//     carousel: ".carousel-container .carousel",
-//     nextBtn: "#carousel-next",
-//     prevBtn: "#carousel-prev",
-//     imagesLinks: {
-//       Programacion: "./img/code.jpg",
-//       Etica: "./img/la_muerte_de_socrates.jpg",
-//       math: "./img/matematicas.jfif",
-//       Calculo: "./img/calculo.jfif",
-//       Admin: "./img/admin.jpg",
-//       Inv: "./img/inv.jpg",
-//     },
-//   });
