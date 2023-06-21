@@ -1,16 +1,4 @@
-export default function Header() {
-  const $header = document.createElement("header");
-  $header.classList.add("header");
-  $header.innerHTML = `
-    <h1>Primer semestre</h1>
-  `;
-
-  $header.insertAdjacentElement("beforeend", DarkmodeBtn());
-
-  return $header;
-}
-
-function DarkmodeBtn() {
+export default function DarkmodeBtn() {
   localStorage.getItem("darkmode") ?? localStorage.setItem("darkmode", false);
 
   const $btn = document.createElement("i");

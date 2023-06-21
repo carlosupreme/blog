@@ -1,6 +1,8 @@
+import DarkmodeBtn from "./DarkModeBtn.js";
+
 function MenuButton(navbar) {
   const $button = document.createElement("i");
-  
+
   $button.classList = navbar.classList.contains("active")
     ? "fas fa-times"
     : "fas fa-bars";
@@ -14,11 +16,11 @@ function MenuButton(navbar) {
     }
   });
 
-  document.addEventListener("keydown", e=>{
-    if(e.key == "b" && e.ctrlKey) {
+  document.addEventListener("keydown", (e) => {
+    if (e.key == "b" && e.ctrlKey) {
       $button.click();
     }
-  })
+  });
   return $button;
 }
 
@@ -42,5 +44,6 @@ export default function Sidebar() {
     </div>
   `;
   $div.insertAdjacentElement("afterbegin", MenuButton($div));
+  $div.insertAdjacentElement("beforeend", DarkmodeBtn());
   return $div;
 }
